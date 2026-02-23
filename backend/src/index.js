@@ -23,6 +23,9 @@ app.use(
 app.use(express.json());
 app.use(cookieParser());
 
+app.get("/", (req, res) => {
+  res.json({ status: "ok" });
+});
 app.get("/api/health", (req, res) => {
   res.json({ status: "ok" });
 });
